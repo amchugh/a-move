@@ -1,0 +1,30 @@
+Here is what I need to have:
+- A method to generate the appropriate model.
+	- To do this I will provide you with:
+		- The length of the 15 bones
+		- The mass of each of those 15 bones
+		- The strength of each joint
+		- The euler angle maximum and minimum angles for each joint
+		- The euler angle current angle for each joint
+	- You can assume the following:
+		- The number of bones will remain constant.
+		- The number of joints will remain constant
+		- Bones will have the same joints regardless of the models
+	- I don't ever want to see the code for this. I just want this to work
+	Try and keep this somewhat efficient. We need to run it hundreds of 
+	thousands of times
+	
+- A method to set the timeset, or the amount of time that is simulated per update
+	- I will pass you a float, do with it what you need.
+	
+- A method to iterate over a timestep:
+	- Arguments:
+		- For each joint, I will give you:
+			- The desired euler angle
+			- How much of the maximum strength the creature is exerting
+			to achieve that desired angle
+	- Your function should simulate time equivalent to the current timestep
+	- I need out:
+		- the euler angles of every joint in space in Shape(x,3) 
+		where x is the number of joints (i don't know off the top of my head
+		- the position of each bone endpoint in space in Shape(15,3)
